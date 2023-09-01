@@ -4,7 +4,6 @@ describe("when a csv parsing is attempted", () => {
     it("should return the expected object structure when a valid file path is provided", async () => {
         const filePath = "../test/file_upload_examples/sampleInput.csv";
         const expectedOutput = [
-            ['Street', ' State', ' Zip Code'],
             ['143 e Maine Street', ' Columbus', ' 43215'],
             ['1 Empora St', ' Title', ' 11111']];
 

@@ -12,7 +12,7 @@ let records = [];
 export const parseInput = async (filePath) => {
   if(!filePath) return [];
   const content = await fs.readFile(path.resolve(__dirname, filePath));
-  const parser = parse(content);
+  const parser = parse(content,{from: 2});
   parser.on('readable', () => {
     let record;
     while ((record = parser.read()) !== null) {
