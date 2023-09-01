@@ -10,6 +10,7 @@ const __dirname = path.dirname(__filename);
 let records = [];
 
 export const parseInput = async (filePath) => {
+  if(!filePath) return [];
   const content = await fs.readFile(path.resolve(__dirname, filePath));
   const parser = parse(content);
   parser.on('readable', () => {
