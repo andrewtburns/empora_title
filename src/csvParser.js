@@ -1,12 +1,18 @@
-const fs = require("fs");
-const { parse } = require("csv-parse");
-const { finished } = require('stream/promises');
+// const fs = require("fs");
+import * as fs from 'node:fs/promises';
+import { parse } from "csv-parse";
+import { finished } from 'stream/promises';
+import { fileURLToPath } from 'url';
+import path from 'path';
 
-const parser = parse();
-const records = [];
-const filePath = __dirname + '/sample_data/sampleInput.csv';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const content = await fs.readFile(path.resolve(__dirname, "sample_data/sampleInput.csv"));
+const parser = parse(content);
 
-const parseInput = async () => {
+let records = [];
+
+export const parseInput = async () => {
   parser.on('readable', () => {
     let record;
     while ((record = parser.read()) !== null) {
@@ -22,9 +28,7 @@ const parseInput = async () => {
     return records;
   });
 
-  fs.createReadStream(filePath).pipe(parser);
   await finished(parser);
   return records;
 }
-
-module.exports = { parseInput }
+export default parseInput;

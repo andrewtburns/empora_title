@@ -1,4 +1,4 @@
-const { parseInput } = require('../src/csvParser');
+import { parseInput } from "../src/csvParser";
 
 describe("when a csv is parsed successfully", () => {
     it("should return the expected object structure", async () => {
