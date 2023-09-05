@@ -3,9 +3,9 @@ export const responseBuilder = (response) => {
         return {
             inputStreet: lookup.street,
             inputCity: lookup.city,
-            inputZip: lookup.zip,
-            deliveryLine: lookup.result.deliveryLine1 ? lookup.result.deliveryLine1 : undefined,
-            lastLine: lookup.result?.lastLine ? lookup.result?.lastLine : undefined
+            inputZip: lookup.zipCode,
+            deliveryLine: lookup.result.length > 0 ? lookup.result[0].deliveryLine1 : undefined,
+            lastLine: lookup.result.length > 0 ? lookup.result[0].lastLine : undefined
         }
     });
 }

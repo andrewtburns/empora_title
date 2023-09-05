@@ -7,14 +7,14 @@ const result = [
 const lookup1 = {
   street: "aStreet",
   city: "aCity",
-  zip: "aZip",
-  result: result[0]
+  zipCode: "aZip",
+  result: result
 }
 
 const lookup2 = {
   street: "aStreet2",
   city: "aCity2",
-  zip: "aZip2",
+  zipCode: "aZip2",
   result: []
 }
 export const lookupsWithOneInvalid = [
