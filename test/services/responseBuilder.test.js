@@ -12,14 +12,20 @@ describe("when a response is being built", () => {
                     inputCity: "aCity",
                     inputZip: "aZip",
                     deliveryLine: "aDeliveryLine1",
-                    lastLine: "aLastLine"
+                    lastLine: "aLastLine",
+                    outputCity: "Columbus",
+                    outputZip: "43215",
+                    outputPlus4Code: "5370"
                 },
                 {
                     inputStreet: "aStreet2",
                     inputCity: "aCity2",
                     inputZip: "aZip2",
                     deliveryLine: undefined,
-                    lastLine: undefined
+                    lastLine: undefined,
+                    outputCity: undefined,
+                    outputZip: undefined,
+                    outputPlus4Code: undefined
                 }
             ]
             ;
