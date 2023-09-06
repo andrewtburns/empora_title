@@ -17,8 +17,6 @@
 - [Getting Started](#getting_started)
 - [Usage](#usage)
 - [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
 - [Additional Notes](#acknowledgement)
 
@@ -80,10 +78,6 @@ The file is provided to the application via command line arguments.  Here's a sa
 ```
 node src/index.js src/sample_data/sampleInput.csv
 ```
-
-## 🚀 Deployment <a name = "deployment"></a>
-
-Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
