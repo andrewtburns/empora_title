@@ -9,11 +9,9 @@ import { formatResults } from "./utils/formatResults.js";
 const relativePath = argv[2] // input file
 const absolutePath = relativePath != undefined ? resolve(cwd(), relativePath) : ""
 
-
 let parsedData = await parseInput(absolutePath);
 let request = await requestBuilder(parsedData);
 let smartAddresses = await fetchSmartyAddresses(request);
-
 
 let finalResponse = await responseBuilder(smartAddresses);
 
