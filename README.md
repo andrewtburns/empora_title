@@ -93,4 +93,8 @@ node src/index.js src/sample_data/sampleInput.csv
 - Most of the code is test driven, but due to the nature of this project and the purpose, there are some edge cases (for example, I mocked the entire module that interacts with SmartySDK api's).  Typically, I'd spend more time isolating failure cases that are reliant on a 3rd party interaction
 - There's a lot of discussion about how the data returned from Smarty could be modelled, but I took a relatively simple approach at first, constructing a simpler response object that fit the needs of the console UI.  It is flexible enough to change rather easily, but this exercise didn't warrant the over-engineering
 
+- Assumptions 
+  - File format, headers, and data itegrity are assumed.  In normal situations, I would spend much more time sanitizing the input to ensure proper handling.  Additionally, a file header is expected in the file (parsing starts at the 2nd row).  This is easily configured, but I wanted to call it out.
+  - smarty api response - Additionally, I simplified the problem by only considering the first lookup result (it is possible to have multiple candidates).  As such, I checked for the existence of results, and picked the first one if it existed.  I am aware of the maxCandidates property in the request, but for now it's omitted.
+
 - Overall, I enjoyed this exercise.  It's not a perfect representation of my skills, but I do believe it gives an accurate insight into how I approach technical challenges.
